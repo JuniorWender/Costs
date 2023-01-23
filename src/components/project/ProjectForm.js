@@ -6,9 +6,10 @@ import SubmitButton from '../form/SubmitButton'
 
 import styles from './ProjectForm.module.css'
 
-function ProjectForm({btnText}){
+function ProjectForm({ handleSubmit , btnText , projectData }){
 
     const[categories, setCategories] = useState([])
+    const [project, setProject] = useState(projectData || {})
 
     useEffect(() => {
         fetch('http://localhost:5000/Categories', {
@@ -24,24 +25,46 @@ function ProjectForm({btnText}){
             .catch((err) => console.log(err))
     }, [])
 
+    const submit = (e) => {
+        e.preventDefault()
+        handleSubmit(project)
+    }
+
+    function handleChange(e) {
+        setProject({...project, [e.target.name]: e.target.value })
+    }
+
+    function handleCategory(e) {
+        setProject({...project, category: {
+            id: e.target.value,
+            name: e.target.options[e.target.selectedIndex].text
+        }})
+    }
+
     return (
-        <form className={styles.form}>
+        <form onSubmit={submit} className={styles.form}>
             <Input 
                 type="text" 
                 text="Project Name" 
                 name="name" 
-                placeholder="Enter with the Project Name" 
+                placeholder="Enter with the Project Name"
+                handeOnChange={handleChange}
+                value={project.name ? project.name : ''}
             />
             <Input 
                 type="number" 
                 text="Project Budget" 
                 name="budget" 
                 placeholder="Total Project Budget" 
+                handeOnChange={handleChange}
+                value={project.budget ? project.budget : ''}
             />
             <Select 
                 name="category_id" 
                 text="Select a Category" 
                 options={categories}
+                handeOnChange={handleCategory}
+                value={project.category ? project.category.id : ''}
             />
             <SubmitButton text={btnText} />
         </form>
