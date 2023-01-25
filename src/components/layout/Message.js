@@ -8,25 +8,24 @@ function Message({type, msg}) {
 
     useEffect(() => {
         if(!msg){
-            setVisible(false)
-            return
+            setVisible(false);
+            return;
         }
 
-        setVisible(true)
+        setVisible(true);
+
         const timer = setTimeout(() => {
-            setVisible(false)
-        }, 3000)
+            setVisible(false);
+        }, 3000);
 
         return () => clearTimeout(timer);
-    }, [msg])
+    }, [msg]);
 
     return (
         <>
-        {visible && (
-            <div className={`${styles.message} ${styles[type]}`}>
-                {msg}
-            </div>
-        )}
+            {visible && (
+                <div className={`${styles.message} ${styles[type]}`}> {msg} </div>
+            )}
         </>
     )
 }
