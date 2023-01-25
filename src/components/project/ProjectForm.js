@@ -3,12 +3,13 @@ import { useEffect, useState } from 'react'
 import Input from '../form/Input'
 import Select from '../form/Select'
 import SubmitButton from '../form/SubmitButton'
+import Message from '../layout/Message'
 
 import styles from './ProjectForm.module.css'
 
 function ProjectForm({ handleSubmit , btnText , projectData }){
 
-    const[categories, setCategories] = useState([])
+    const [categories, setCategories] = useState([])
     const [project, setProject] = useState(projectData || {})
 
     useEffect(() => {
@@ -27,7 +28,12 @@ function ProjectForm({ handleSubmit , btnText , projectData }){
 
     const submit = (e) => {
         e.preventDefault()
-        handleSubmit(project)
+        if (project.budget > 0 && project.category != null )
+            handleSubmit(project)
+        else{
+            // <Message type="error" msg="Verify input fields and try again!"/>
+            console.log('Verify input fields and try again!');
+        }   
     }
 
     function handleChange(e) {
@@ -48,7 +54,7 @@ function ProjectForm({ handleSubmit , btnText , projectData }){
                 text="Project Name" 
                 name="name" 
                 placeholder="Enter with the Project Name"
-                handeOnChange={handleChange}
+                handleOnChange={handleChange}
                 value={project.name ? project.name : ''}
             />
             <Input 
@@ -56,14 +62,14 @@ function ProjectForm({ handleSubmit , btnText , projectData }){
                 text="Project Budget" 
                 name="budget" 
                 placeholder="Total Project Budget" 
-                handeOnChange={handleChange}
+                handleOnChange={handleChange}
                 value={project.budget ? project.budget : ''}
             />
             <Select 
                 name="category_id" 
                 text="Select a Category" 
                 options={categories}
-                handeOnChange={handleCategory}
+                handleOnChange={handleCategory}
                 value={project.category ? project.category.id : ''}
             />
             <SubmitButton text={btnText} />

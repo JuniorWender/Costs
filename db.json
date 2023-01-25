@@ -23,8 +23,8 @@
       "id": 2
     },
     {
-      "name": "teste",
-      "budget": "1",
+      "name": "da",
+      "budget": "2",
       "category": {
         "id": "1",
         "name": "Infra"
@@ -32,6 +32,39 @@
       "cost": 0,
       "services": [],
       "id": 3
+    },
+    {
+      "name": "a",
+      "budget": "2",
+      "category": {
+        "id": "4",
+        "name": "Planing"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 4
+    },
+    {
+      "name": "b",
+      "budget": "2",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 5
+    },
+    {
+      "category": {
+        "id": "2",
+        "name": "Dev"
+      },
+      "name": "2",
+      "budget": "2",
+      "cost": 0,
+      "services": [],
+      "id": 6
     }
   ],
   "Categories": [

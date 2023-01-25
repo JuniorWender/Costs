@@ -2,24 +2,24 @@ import { useState, useEffect } from 'react';
 
 import styles from './Message.module.css'
 
-function Message({type, msg}) {
+function Message({ type, msg }) {
 
     const [visible, setVisible] = useState(false)
 
     useEffect(() => {
         if(!msg){
-            setVisible(false);
-            return;
+            setVisible(false)
+            return
         }
 
-        setVisible(true);
+        setVisible(true)
 
         const timer = setTimeout(() => {
-            setVisible(false);
-        }, 3000);
+            setVisible(false)
+        }, 3000)
 
-        return () => clearTimeout(timer);
-    }, [msg]);
+        return () => clearTimeout(timer)
+    }, [msg])
 
     return (
         <>
@@ -30,4 +30,4 @@ function Message({type, msg}) {
     )
 }
 
-export default Message;
+export default Message
