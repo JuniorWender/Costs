@@ -5,6 +5,7 @@ import Loading from './../layout/Loading';
 import Container from '../layout/Container';
 import ProjectForm from './../project/ProjectForm';
 import Message from '../layout/Message';
+import ServiceForm from '../service/ServiceForm'
 
 import styles from './Project.module.css'
 
@@ -14,6 +15,7 @@ function Project() {
 
     const [project, setProject] = useState([])
     const [showProjectForm, setShowProjectForm] = useState(false)
+    const [showServiceForm, setShowServiceForm] = useState(false)
     const [message, setMessage] = useState('')
     const [type, setType] = useState('')
 
@@ -34,6 +36,8 @@ function Project() {
     }, [id])
     
     function editPost(project) {
+        setMessage('')
+
         if( project.budget < project.cost) {
             setMessage('The Budget Cannot Be Less Than The Bost Of The Project!')
             setType('error')
@@ -59,6 +63,10 @@ function Project() {
 
     function toggleProjectForm() {
         setShowProjectForm(!showProjectForm)
+    }
+
+    function toggleServiceForm() {
+        setShowServiceForm(!showServiceForm)
     }
 
     return (
@@ -93,6 +101,21 @@ function Project() {
                             </div>
                         )}
                     </div>
+                    <div className={styles.service_form_container}>
+                        <h2>Add Services:</h2>
+                        <button className={styles.btn} onClick={toggleServiceForm}>
+                            {!showServiceForm ? 'Add Service' : 'Close'}
+                        </button>
+                        <div className={styles.project_info} >
+                            {showServiceForm && (
+                                <ServiceForm />
+                            )}
+                        </div>
+                    </div>
+                    <h2>Services</h2>
+                    <Container customClass="start" >
+                        <p> Services Itens </p>
+                    </Container>
                 </Container>
             </div>
         
