@@ -12,11 +12,11 @@
       "id": 2
     },
     {
-      "name": "f",
-      "budget": "2",
+      "name": "Back-End Dev",
+      "budget": "10000",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "2",
+        "name": "Dev"
       },
       "cost": 0,
       "services": [],
