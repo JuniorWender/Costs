@@ -32,7 +32,6 @@ function ProjectForm({ handleSubmit , btnText , projectData }){
 
     const submit = (e) => {
         setMessage('')
-
         e.preventDefault()
         if (project.budget > 0 && project.category != null && project.name.length > 0)
             handleSubmit(project)

@@ -21,6 +21,24 @@
       "cost": 0,
       "services": [],
       "id": 3
+    },
+    {
+      "budget": "100",
+      "name": "teste",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 100,
+      "services": [
+        {
+          "cost": "100",
+          "name": "a",
+          "description": "a",
+          "id": "e0c60fd2-ec9d-43ae-b839-f5a96ca3d462"
+        }
+      ],
+      "id": 4
     }
   ],
   "Categories": [
