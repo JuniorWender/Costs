@@ -13,7 +13,10 @@
 
 .social_list li {
     margin: 0 1em;
+}
 
+.social_list li a{
+    color: #fff;
 }
 
 .social_list li:hover {
