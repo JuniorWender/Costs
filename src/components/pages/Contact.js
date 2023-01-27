@@ -34,8 +34,8 @@ function Contact() {
                     <TextArea
                         name="message"
                         text="Your Message"
-                        row={5}
-                        cols={8}
+                        row={8}
+                        cols={5}
                         placeholder="Write Your Message Here"
                     />
                     <SubmitButton text="Send"/>
