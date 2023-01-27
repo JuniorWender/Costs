@@ -9,7 +9,7 @@
     font-weight: bold;
 }
 
-.form_control input {
+.form_control textarea {
     padding: .7em;
     border-radius: 0;
     border: none;
@@ -17,21 +17,4 @@
 
 .form_control input::placeholder{
     color: #7b7b7b;
-}
-
-input[type=number]::-webkit-inner-spin-button { 
-    -webkit-appearance: none;
-}
-
-input[type=number] { 
-   -moz-appearance: textfield;
-   appearance: textfield;
-}
-
-.invalid  {
-    border: 1px solid red ;
-}
-
-.valid {
-    border: none;
 }

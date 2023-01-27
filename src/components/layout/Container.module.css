@@ -17,4 +17,5 @@
 .column{
     flex-direction: column;
     justify-content: flex-start;
+    padding-top: 1em;
 }
