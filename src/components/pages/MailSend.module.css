@@ -1,0 +1,16 @@
+.box{
+    margin: auto;
+}
+
+.box h1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 1em;
+}
+
+.box svg {
+    width: 100%;
+    font-size: 200px;
+    color: #ffbb33;
+}

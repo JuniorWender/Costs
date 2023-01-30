@@ -1,6 +1,6 @@
 import styles from './TextArea.module.css'
 
-function TextArea({id,name,row,cols,text,placeholder}) {
+function TextArea({id, name, row, cols, text, placeholder, required, handleOnChange}) {
 
     return (
       <div className={styles.form_control}> 
@@ -10,7 +10,9 @@ function TextArea({id,name,row,cols,text,placeholder}) {
             name={name}
             row={row}
             cols={cols}
+            onChange={handleOnChange} 
             placeholder={placeholder}
+            required={required}
         />
        </div>
     )

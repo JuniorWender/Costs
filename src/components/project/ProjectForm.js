@@ -90,6 +90,7 @@ function ProjectForm({ handleSubmit , btnText , projectData }){
                 <Select 
                     name="category_id" 
                     text="Select a Category" 
+                    optText= "Select an Option"
                     options={categories}
                     handleOnChange={handleCategory}
                     value={project.category ? project.category.id : ''}
