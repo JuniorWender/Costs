@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import API  from '../../config.json';
+
 import Container from './../layout/Container';
 import Input from './../form/Input';
 import SubmitButton from '../form/SubmitButton';
@@ -17,7 +19,7 @@ function Contact() {
     function submit(e) {
         e.preventDefault()
 
-        fetch("https://formsubmit.co/ajax/juniorwender1996@gmail.com", {
+        fetch(API.url.form, {
             method: "POST",
             headers: { 
                 'Content-Type': 'application/json',
@@ -34,7 +36,7 @@ function Contact() {
             })
         })
         
-        navigate('./MailSend')
+        navigate('../MailSend')
     }
 
     function handleChange(e) {

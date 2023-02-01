@@ -1,6 +1,8 @@
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+import API  from '../../config.json';
+
 import Message from "../layout/Message";
 import Container from "../layout/Container";
 import Loading from "../layout/Loading";
@@ -24,7 +26,7 @@ function Projects() {
 
     useEffect( () => {
        setTimeout(() => {
-            fetch('http://localhost:5000/projects', {
+            fetch(API.url.api.Projects, {
                 method: 'GET',
                 Headers: {
                     'Content-Type' : 'application/json',
@@ -40,7 +42,7 @@ function Projects() {
     }, []);
 
     function removeProject(id){
-        fetch(`http://localhost:5000/projects/${id}`, {
+        fetch(`${API.url.api.Projects}/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type' : 'application/json'

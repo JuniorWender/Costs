@@ -19,3 +19,11 @@
     justify-content: flex-start;
     padding-top: 1em;
 }
+
+.otherProjects{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+    margin-top: 1em;
+}

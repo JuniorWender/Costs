@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+import API  from '../../config.json';
+
 import Input from '../form/Input'
 import Select from '../form/Select'
 import SubmitButton from '../form/SubmitButton'
@@ -17,7 +19,7 @@ function ProjectForm({ handleSubmit , btnText , projectData }){
     const [budgetStyle, setBudgetStyle] = useState('valid')
 
     useEffect(() => {
-        fetch('http://localhost:5000/Categories', {
+        fetch(API.url.api.Categories, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

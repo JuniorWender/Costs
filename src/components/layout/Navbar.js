@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 
 import Container from './Container'
+import logo from '../../img/costs_logo.png'
 
 import styles from './Navbar.module.css'
-import logo from '../../img/costs_logo.png'
 
 function Navbar(props){
     return(
@@ -21,7 +21,7 @@ function Navbar(props){
                         <Link to="/Contact">Contact</Link>
                     </li>
                     <li className={styles.item}>
-                        <Link to="/Company">Company</Link>
+                        <Link to="/OtherProjects">Other Projects</Link>
                     </li>
                 </ul>
             </Container>

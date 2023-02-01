@@ -1,0 +1,12 @@
+.explain div {
+    padding-top: 1em;
+}
+
+.explain span {
+    font-weight: bold;
+}
+
+.link {
+    font-weight: bold;
+    color: #ffbb33;
+}
