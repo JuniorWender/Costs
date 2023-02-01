@@ -1,0 +1,12 @@
+{
+    "url" :
+    {
+        "form" : "https://formsubmit.co/ajax/juniorwender1996@gmail.com",
+
+        "api" : 
+        {
+            "Projects" : "http://localhost:5000/projects",
+            "Categories" : "http://localhost:5000/Categories"
+        }
+    }
+}

@@ -1,6 +1,8 @@
-import { json, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { parse, v4 as uuidv4 } from 'uuid'
+
+import API  from '../../config.json';
 
 import Loading from './../layout/Loading';
 import Container from '../layout/Container';
@@ -24,7 +26,7 @@ function Project() {
 
     useEffect(() => {
        setTimeout(() => {
-        fetch(`http://localhost:5000/projects/${id}`,{
+        fetch(`${API.url.api.Projects}/${id}`,{
             method: 'GET',
             headers: {
                 'Content-Type' : 'application/json' ,
@@ -48,7 +50,7 @@ function Project() {
             return false
         }
 
-        fetch(`http://localhost:5000/projects/${project.id}`,{
+        fetch(`${API.url.api.Projects}/${project.id}`,{
             method: 'PATCH',
             headers: {
                 'Content-Type' : 'application/json'
@@ -86,7 +88,7 @@ function Project() {
         project.cost = newCost
 
         // update project
-        fetch(`http://localhost:5000/projects/${project.id}`,{
+        fetch(`${API.url.api.Projects}/${project.id}`,{
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -113,7 +115,7 @@ function Project() {
         projectUpdated.services = servicesUpdated
         projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
 
-        fetch(`http://localhost:5000/projects/${projectUpdated.id}`,{
+        fetch(`${API.url.api.Projects}/${projectUpdated.id}`,{
             method: 'PATCH',
             headers: {
                 'Content-Type' : 'application/json'

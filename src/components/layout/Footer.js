@@ -5,8 +5,8 @@ function Footer(props){
     return(
         <footer className={styles.footer}>
             <ul className={styles.social_list}>
-                <li><FaGithub/></li>
-                <li><FaLinkedin/></li>
+                <li><a href="https://github.com/JuniorWender"><FaGithub/></a></li>
+                <li><a href="https://www.linkedin.com/in/jorgewenderjunior/"><FaLinkedin/></a></li>
             </ul>
             <p className={styles.copy_right}>
                 <span>Costs</span> &copy; 2023

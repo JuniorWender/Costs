@@ -25,4 +25,8 @@ Costs is a Project Manager site, it's possible create a project budget and contr
 
 ### Project Idea
 
-It's a Study Project And You Can Check The Official Video Course on This link : [Matheus Battisti - Hora de Codar](https://www.youtube.com/playlist?list=PLnDvRpP8BneyVA0SZ2okm-QBojomniQVO) [Pt-Br]
+The Basic Idea About The Project I Used This Course : [Matheus Battisti - Hora de Codar](https://www.youtube.com/playlist?list=PLnDvRpP8BneyVA0SZ2okm-QBojomniQVO) [Pt-Br]. 
+
+<br>
+
+But I Increased The Project With New Features Before.
