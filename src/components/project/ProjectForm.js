@@ -15,8 +15,8 @@ function ProjectForm({ handleSubmit , btnText , projectData }){
     const [project, setProject] = useState(projectData || {})
     const [message, setMessage] = useState('')
     const [type, setType] = useState('')
-    const [nameStyle, setNameStyle] = useState('valid')
-    const [budgetStyle, setBudgetStyle] = useState('valid')
+    // const [nameStyle, setNameStyle] = useState('valid')
+    // const [budgetStyle, setBudgetStyle] = useState('valid')
 
     useEffect(() => {
         fetch(API.url.api.Categories, {
@@ -78,7 +78,7 @@ function ProjectForm({ handleSubmit , btnText , projectData }){
                     placeholder="Enter with the Project Name"
                     handleOnChange={handleChange}
                     value={project.name ? project.name : ''}
-                    customClass={nameStyle}
+                    // customClass={nameStyle}
                     />
                 <Input 
                     type="number" 
@@ -87,7 +87,7 @@ function ProjectForm({ handleSubmit , btnText , projectData }){
                     placeholder="Total Project Budget" 
                     handleOnChange={handleChange}
                     value={project.budget ? project.budget : ''}
-                    customClass={budgetStyle}
+                    // customClass={budgetStyle}
                     />
                 <Select 
                     name="category_id" 
