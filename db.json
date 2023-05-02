@@ -21,6 +21,24 @@
       "cost": 0,
       "services": [],
       "id": 3
+    },
+    {
+      "name": "teste",
+      "budget": "565",
+      "category": {
+        "id": "2",
+        "name": "Dev"
+      },
+      "cost": 53,
+      "services": [
+        {
+          "name": "asdasd",
+          "cost": "53",
+          "description": "asd",
+          "id": "d1fc885f-8379-47ee-b25f-c6695f423c0f"
+        }
+      ],
+      "id": 4
     }
   ],
   "Categories": [
